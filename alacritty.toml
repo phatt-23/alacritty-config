@@ -1,0 +1,44 @@
+import = [
+    "~/.config/alacritty/themes/themes/wombat.toml"
+]
+
+[shell]
+program = "fish"
+
+[window]
+opacity = 0.9
+padding = { x = 20, y = 10 }
+dynamic_padding = true
+decorations = "none" 
+dynamic_title = true
+
+
+[font]
+# normal = { family = "Iosevka Fixed" }
+normal = { family = "Iosevka Fixed", style = "Medium" }
+bold = { family = "Iosevka Fixed", style = "ExtraBold"}
+# normal = { family = "Iosevka Fixed Extended" }
+# normal = { family = "Input Mono Narrow", style = "Regular" }
+# normal = { family = "Input Mono Compressed" }
+# normal = { family = "Victor Mono", style = "SemiBold" }
+# normal = { family = "EnvyCodeR Nerd Font Mono", style = "Regular" }
+# normal = { family = "Carpenter" }
+size = 14
+
+[bell]
+animation = "EaseOutCubic"
+duration = 250
+color = "#d18191"
+
+[terminal]
+osc52 = "CopyPaste"
+
+[cursor]
+style = { shape = "Beam" , blinking = "On" }
+vi_mode_style = { shape = "Beam" , blinking = "On" } 
+unfocused_hollow = false
+thickness = 0.2
+
+
+
+
