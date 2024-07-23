@@ -1,29 +1,41 @@
 import = [
-    "~/.config/alacritty/themes/themes/wombat.toml"
+    # "themes/themes/snazzy.toml"
+    # "themes/themes/wombat.toml"
+    # "themes/themes/xterm.toml"
+    # "themes/themes/iterm.toml"
+    # "themes/themes/monokai_charcoal.toml"
+    # "themes/themes/hyper.toml"
+    # "themes/themes/midnight-haze.toml"
+    # "themes/themes/ayu_dark.toml"
+    # "themes/themes/catppuccin_mocha.toml"
+    # "themes/themes/challenger_deep.toml"
+    # "themes/themes/dracula.toml"
+    # "themes/themes/github_dark_default.toml"
+    # "themes/themes/github_dark_high_contrast.toml"
+    # "themes/themes/hardhacker.toml"
+    # "themes/themes/tokyo-night.toml"
+    "my_themes/gruber.toml"
 ]
 
 [shell]
 program = "fish"
 
 [window]
-opacity = 0.9
-padding = { x = 20, y = 10 }
-dynamic_padding = true
-decorations = "none" 
-dynamic_title = true
-
+# opacity = 0.95
+# padding = { x = 0, y = 0 }
+# decorations = "none" 
+# dynamic_title = true
+# dynamic_padding = true
 
 [font]
-# normal = { family = "Iosevka Fixed" }
-normal = { family = "Iosevka Fixed", style = "Medium" }
-bold = { family = "Iosevka Fixed", style = "ExtraBold"}
-# normal = { family = "Iosevka Fixed Extended" }
-# normal = { family = "Input Mono Narrow", style = "Regular" }
-# normal = { family = "Input Mono Compressed" }
-# normal = { family = "Victor Mono", style = "SemiBold" }
-# normal = { family = "EnvyCodeR Nerd Font Mono", style = "Regular" }
-# normal = { family = "Carpenter" }
-size = 14
+# normal = { family = "Terminus" }
+# normal = { family = "Iosevka" }
+# normal = { family = "monospace"}
+# normal = { family = "iMWritingMono Nerd Font" }
+# normal = { family = "CaskaydiaCove Nerd Font Propo" }
+# normal = { family = "CommitMono Nerd Font", style = "Regular" }
+normal = { family = "UbuntuSansMono Nerd Font" }
+size = 12
 
 [bell]
 animation = "EaseOutCubic"
@@ -34,11 +46,21 @@ color = "#d18191"
 osc52 = "CopyPaste"
 
 [cursor]
-style = { shape = "Beam" , blinking = "On" }
-vi_mode_style = { shape = "Beam" , blinking = "On" } 
-unfocused_hollow = false
+style = { shape = "Block" , blinking = "On" }
+vi_mode_style = { shape = "Block" , blinking = "On" } 
+unfocused_hollow = true
 thickness = 0.2
 
+[scrolling]
+history = 10000
+multiplier = 8
 
+[keyboard]
+bindings = [
+   { key = "Return", mods = "Shift|Alt", action = "SpawnNewInstance" }
+]
 
-
+[[hints.enabled]]
+regex = "[^ ]+\\.(rs|c|h|cpp|hs|cs):\\d+:\\d+"
+command = { program = "alacritty", args = [ "-e", "hx" ] }
+mouse = { enabled = true }
